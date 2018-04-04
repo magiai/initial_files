@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+//------------------
+//grid
+//------------------
+$coulmnCount: 12;
+$gutter: 0px;
+
+.container {
+    margin: $gutter / 2;
+}
+.row {
+    [class*="col-"] {
+        margin-bottom: $gutter * 2;
+    }
+}
+@media only screen and (min-width:768px) {
+
+.row {
+    margin-bottom: $gutter*2;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    @for $i from 1 through $coulmnCount {
+        .col-#{$i}-#{$coulmnCount} {
+            width: (100 / $coulmnCount * $i) * 1%;
+        }
+    }
+
+    [class*="col-"] {
+        //^ - zaczyna się od
+        float: left;
+        padding-left: $gutter;
+        padding-right: $gutter;
+        margin-bottom: 0px;
+        box-sizing: border-box;
+    }
+}
+}

@@ -1,0 +1,94 @@
+
+@mixin backgroundImage {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@mixin button {
+  width: 100px;
+  height: 30px;
+  border: 0px;
+  border-radius: 5px;
+  color: red;
+  /*background: linear-gradient(to left, color1, color2);*/
+  font-size: 10px;
+  font-weight: bold;
+}
+
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexRowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexCenterManyElements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flexColumnLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@mixin flexRowLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+@mixin flexColumnRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@mixin flexRowRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+
+
+@mixin stickyMenu {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  overflow: hidden;
+}
+
+ 
+@mixin verticalText {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+
